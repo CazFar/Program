@@ -1,4 +1,4 @@
-var baris=16;
+var baris=5;
 var polaBintang= "*";
 var polaSamaDengan= "=";
 var spasi =  "";
