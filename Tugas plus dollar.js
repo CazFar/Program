@@ -1,44 +1,25 @@
-var baris = 5;
-var polaPlus = "+";
-var polaDollar = "$";
-var hasil = "";
+var baris=16;
+var polaBintang= "*";
+var polaSamaDengan= "=";
+var spasi =  "";
+var dolar = "$";
+for(let index = baris; index > 0; index--){
 
-for (let indexx = 1; indexx < 10; indexx++) {
-	if ((indexx %2)===0) {
-	hasil = hasil.concat(polaDollar);
-	} else { 
-	hasil = hasil.concat(polaPlus);
-	}
-}
-console.log(""+hasil);
+    var hasil="";
 
-hasil="";
-for (let indexx = 1; indexx < 8; indexx++) {
-	if ((indexx %2)===0) {
-	hasil = hasil.concat(polaDollar);
-	} else { 
-	hasil = hasil.concat(polaPlus);
-	}
-}
-console.log(" "+hasil);
+    var jmplhcell = (index*2)-1;
+    //console.log(jmplhcell);
 
-hasil="";
-for (let indexx = 1; indexx < 6; indexx++) {
-	if ((indexx %2)===0) {
-	hasil = hasil.concat(polaDollar);
-	} else { 
-	hasil = hasil.concat(polaPlus);
-	}
-}
-console.log("  "+hasil);
-
-hasil="";
-for (let indexx = 1; indexx <4; indexx++) {
-	if ((indexx %2)===0) {
-	hasil = hasil.concat(polaDollar);
-	} else { 
-	hasil = hasil.concat(polaPlus);
-	}
-}
-console.log("   "+hasil);
-console.log("    "+polaDollar);
+    for (let index2 = jmplhcell; index2 > 1; index2--){
+        if ((index2 %2)==0){
+         hasil = hasil.concat(polaSamaDengan);
+        }else if((index2)==jmplhcell){
+          hasil = hasil.concat(dolar);
+        }else{
+         hasil = hasil.concat(polaBintang);
+        } 
+   
+    }
+    console.log(spasi+hasil+dolar)
+    spasi += " ";
+} 
